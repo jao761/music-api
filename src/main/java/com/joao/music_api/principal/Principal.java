@@ -71,6 +71,7 @@ public class Principal {
         var sexo = leitura.nextLine();
         Sexo sexoCovertido =  Sexo.fromStrig(sexo);
         Artista artista = new Artista(nomeArtistico,nome, anoNascimento, sexoCovertido);
+        artistaRepository.save(artista);
         System.out.printf("Nome do artista: %s, Nome real: %s, Idade: %s, Sexo: %s \n",
                 artista.getNomeArtistico(), artista.getNome(), idade,
                 artista.getSexo());
